@@ -8,18 +8,19 @@ public:
     int size = 0;
 
     void insertion(int val)
+    
     {
         size = size + 1;
-        int length = size;
-        arr[length] = val;
+        int child = size;
+        arr[child] = val;
 
-        while (length > 1)
+        while (child > 1)
         {
-            int parent = length / 2;
-            if (arr[parent] < arr[length])
+            int parent = child / 2;
+            if (arr[parent] < arr[child])
             {
-                swap(arr[parent], arr[length]);
-                length=parent;
+                swap(arr[parent], arr[child]);
+                child=parent;
             }
 
             else
